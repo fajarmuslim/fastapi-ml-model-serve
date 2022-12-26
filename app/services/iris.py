@@ -10,6 +10,7 @@ class IrisPredictor:
 
 
     def get_single_prediction(self, feature: IrisSingleRequest) -> Dict[str, List[int]]:
+        print("hello world")
         formatted_features = [[feature.sepal_length,feature.sepal_width,feature.petal_length,feature.petal_width]]
         result = self.model.predict(formatted_features)
         print({"result": result.tolist()[0]})
